@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Mena Grotesk';
-  src: url('//public/assets/fonts/Mena-Grotesk-Book.woff') format('woff');
+  src: url('public/assets/fonts/Mena-Grotesk-Book.woff') format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Mena Grotesk';
-  src: url('//public/assets/fonts/Mena-Grotesk-Bold.woff') format('woff');
+  src: url('public/assets/fonts/Mena-Grotesk-Bold.woff') format('woff');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Mena Grotesk';
-  src: url('//public/assets/fonts/Mena-Grotesk-SemiBold.woff') format('woff');
+  src: url('public/assets/fonts/Mena-Grotesk-SemiBold.woff') format('woff');
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@ p {
 /* hero */
 
 .hero {
-  background: url('//public/assets/images/hero.jpg');
+  background: url('public/assets/images/hero.jpg');
   background-size: cover;
   background-position: 65% center;
   padding: 9.4rem 0 15rem;
@@ -196,7 +196,7 @@ p {
 /* simposio */
 
 .simposio {
-  background: url('/public/assets/images/background-simposio.jpg');
+  background: url('public/assets/images/background-simposio.jpg');
   background-repeat: no-repeat;
   background-position: center -40%;
   padding: 14rem 0 6.4rem;
@@ -346,7 +346,7 @@ p {
 
 .ingresso {
   padding: 12.8rem 0;
-  background: url('/public/assets/images/tube.png');
+  background: url('public/assets/images/tube.png');
   background-repeat: no-repeat;
   background-position: center 45%;
 }
@@ -450,7 +450,7 @@ p {
 .sobre {
   margin-top: 22rem;
   padding: 0 0 12.8rem;
-  background: url('/public/assets/images/background-sobre.jpg') center top;
+  background: url('public/assets/images/background-sobre.jpg') center top;
   background-repeat: no-repeat;
 }
 
@@ -642,7 +642,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .hero {
-    background: url('/public/assets/images/background-hero-mobile.jpg');
+    background: url('public/assets/images/background-hero-mobile.jpg');
     min-height: 100dvh;
     background-size: cover;
     background-position: center center;
