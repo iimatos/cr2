@@ -1,0 +1,743 @@
+@font-face {
+  font-family: 'Mena Grotesk';
+  src: url('/assets/fonts/Mena-Grotesk-Book.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mena Grotesk';
+  src: url('/assets/fonts/Mena-Grotesk-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Mena Grotesk';
+  src: url('/assets/fonts/Mena-Grotesk-SemiBold.woff') format('woff');
+  font-weight: 600;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Mena Grotesk';
+  font-weight: 400;
+  color: #313131;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  line-height: 110%;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.9rem;
+}
+
+p {
+  line-height: 150%;
+}
+
+/* general */
+
+.container {
+  width: 100%;
+  max-width: 123rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.button-primary {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #db2107;
+  padding: 2.4rem 8rem 2.4rem 2.4rem;
+  border-radius: 1.2rem;
+  box-shadow: inset 0 12px 35px rgba(255, 149, 73, 0.7),
+    0px 11.8px 47.22px 0px rgba(188, 88, 32, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(226, 190, 190, 1);
+  width: 4.5rem;
+  height: 100%;
+}
+
+.button-primary .icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* hero */
+
+.hero {
+  background: url('/assets/images/hero.jpg');
+  background-size: cover;
+  background-position: 65% center;
+  padding: 9.4rem 0 15rem;
+}
+
+.promessa-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 61rem;
+  align-items: start;
+}
+
+.promessa-left h1 {
+  color: #5448ce;
+  font-size: 3.8rem;
+}
+
+.promessa-left p {
+  font-size: 2.3rem;
+  max-width: 40rem;
+}
+
+.evento-data {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.evento-data span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+/* divisao*/
+
+.divisao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to bottom, #37256c, #0359ff);
+  padding: 2rem 0;
+}
+
+.divisao-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.divisao-item {
+  text-align: center;
+  max-width: 38rem;
+  flex: 1;
+  color: #fff;
+  border-right: 1px solid white;
+  padding: 0 2rem;
+}
+
+.divisao-item--top {
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+
+.divisao-item--bottom {
+  font-size: 1.3rem;
+}
+
+/* .divisao-item:nth-of-type(1) {
+  max-width: 20rem;
+  text-align: left;
+  padding: 0 2rem 0 0;
+}
+
+.divisao-item:nth-of-type(5) {
+  max-width: 20rem;
+  border-right: none;
+} */
+
+/* simposio */
+
+.simposio {
+  background: url('assets/images/background-simposio.jpg');
+  background-repeat: no-repeat;
+  background-position: center -40%;
+  padding: 14rem 0 6.4rem;
+}
+
+.simposio--first-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.2rem;
+}
+
+.simposio--first-content h1 {
+  font-size: 4.8rem;
+  text-align: center;
+  max-width: 90rem;
+}
+
+.simposio--first-content p {
+  text-align: center;
+  max-width: 82rem;
+}
+
+.simposio--first-content span {
+  display: flex;
+  gap: 2rem;
+}
+
+/* simposio evento */
+
+.simposio-evento {
+  margin-top: 20rem;
+}
+
+.simposio-evento--wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 22rem 22rem;
+  gap: 4rem 3.2rem;
+}
+
+.simposio-evento--wrapper-grid h2 {
+  font-size: 3.9rem;
+  grid-column: span 2;
+}
+
+.card-evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #fff;
+  background: #004097;
+  border-radius: 3.2rem;
+  padding: 3.2rem;
+  box-shadow: 0px 36.55px 73.1px 0px rgba(0, 0, 0, 0.2), 0px 18.28px 36.55px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* agenda box */
+
+.agenda {
+  padding: 18.2rem 0;
+}
+
+.agenda .container > h2 {
+  text-align: center;
+}
+
+.agenda-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 10rem;
+  background: linear-gradient(to right, #c7f4fe, #50bdfb);
+  padding: 6rem 3rem;
+  border-radius: 3.5rem;
+}
+.agenda-lista + .agenda-lista {
+  margin-top: 4.3rem;
+}
+
+.agenda-lista h3 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.agenda-lista li + li {
+  margin-top: 2.4rem;
+}
+
+.agenda-box--right {
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.agenda-box--left {
+  width: 50%;
+  max-width: 40rem;
+}
+
+.lista-topico {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.lista-topico-icone {
+  width: 20px;
+}
+
+.lista-topico-horario {
+  color: #006afa;
+  font-weight: 600;
+}
+
+/* certificado */
+
+.certificado {
+  padding-bottom: 6rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.certificado > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificado h2 {
+  text-align: center;
+  max-width: 73rem;
+}
+
+.certificado .button-primary {
+  margin-top: 9.4rem;
+}
+
+.certificado-image-wrapper {
+  margin-top: 12rem;
+}
+
+/* ingressos */
+
+.ingresso {
+  padding: 12.8rem 0;
+  background: url('assets/images/tube.png');
+  background-repeat: no-repeat;
+  background-position: center 45%;
+}
+
+.ingresso > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12.8rem;
+}
+
+.ingresso h2 {
+  text-align: center;
+  max-width: 50rem;
+}
+
+.opcoes-ingressos {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.opcao-ingresso {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.opcao-padding {
+  padding: 3rem 2rem;
+}
+
+.opcao-title {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: #003a64;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  border-radius: 3.5rem 3.5rem 0 0;
+}
+
+.opcao-beneficios-item {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2.4rem 1.6rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: #003a64;
+  border-radius: 2rem;
+}
+
+.opcao-beneficios-item + .opcao-beneficios-item {
+  margin-top: 0.5rem;
+}
+
+.opcao-beneficios-item.unchecked {
+  background: #002642;
+}
+
+.opcao-beneficios-item.unchecked p {
+  color: #04a0d0;
+  text-decoration: line-through;
+}
+
+.opcao--left {
+  background: linear-gradient(to bottom, rgba(0, 154, 203, 0.5), rgba(0, 154, 203, 1));
+  backdrop-filter: blur (20px);
+}
+
+.opcao--right {
+  background: linear-gradient(to bottom, rgba(0, 106, 250, 0.7), rgba(0, 106, 250, 1));
+  backdrop-filter: blur(20px);
+}
+
+.opcao-preco-wrapper {
+  text-align: center;
+  margin: 2.6rem 0 4.3rem 0;
+  color: #fff;
+  font-size: 2.3rem;
+}
+
+.opcao-preco-text {
+  font-size: clamp(4.8rem, 6vw, 9rem);
+}
+
+.forma-pagamento {
+  position: absolute;
+  bottom: -3.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* sobre */
+
+.sobre {
+  margin-top: 22rem;
+  padding: 0 0 12.8rem;
+  background: url('assets/images/background-sobre.jpg') center top;
+  background-repeat: no-repeat;
+}
+
+.sobre-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+  color: #fff;
+  background: #006afa;
+  gap: 5rem;
+  border-radius: 3.5rem;
+}
+
+.sobre-wrapper-content--right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.1rem;
+}
+
+.sobre-wrapper > img {
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+
+.sobre-wrapper-content--right h2 {
+  font-weight: 600;
+}
+
+/* faq */
+
+.faq {
+  padding: 6.4rem 0;
+}
+
+.faq > .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.faq h2 {
+  text-transform: uppercase;
+}
+
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.faq-item {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.faq-pergunta {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.faq-resposta {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  margin-top: 2rem;
+}
+
+.faq-resposta p {
+  padding-bottom: 0.6rem;
+}
+
+.faq-item.open .faq-resposta {
+  grid-template-rows: 1fr;
+}
+
+.faq-pergunta img {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-pergunta img {
+  transform: rotate(-180deg);
+}
+
+.faq-item .faq-resposta > div {
+  overflow: hidden;
+}
+
+/* suporte */
+
+.suporte {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 33.5rem;
+  padding: 2rem;
+  background: #006afa;
+  border-radius: 3.5rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.suporte-image {
+  margin-top: -4rem;
+}
+
+.button-suporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 6rem 2rem 2rem;
+  border-radius: 3.2rem;
+  background: linear-gradient(to right, #0ed4ff, #00ffe0);
+  color: #000000;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.button-suporte-icon {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate3d(-4px, -50%, 0);
+  box-shadow: inset 0 0.09rem 0 rgba(67, 26, 1, 0.25), 0px 3.77px 3.77px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* responsivo */
+
+@media screen and (max-width: 1024px) {
+  .divisao-item--top {
+    font-size: 2.4rem;
+  }
+
+  .simposio-evento--wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+  }
+
+  .simposio-evento--wrapper-grid h2 {
+    grid-column: span 3;
+  }
+
+  .fill-grid {
+    display: none;
+  }
+
+  .agenda-box {
+    flex-direction: column-reverse;
+  }
+
+  .agenda-box--right,
+  .agenda-box--left {
+    width: 100%;
+  }
+
+  .agenda-box--left {
+    align-self: center;
+  }
+
+  .sobre-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sobre-wrapper > img {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .divisao-lista {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background: url('assets/images/background-hero-mobile.jpg');
+    min-height: 100dvh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 9.4rem 0 6.4rem;
+  }
+
+  .promessa-left {
+    margin-top: 25rem;
+  }
+
+  .promessa-left h1 {
+    font-size: 3.9rem;
+  }
+
+  .simposio--first-content h1 {
+    font-size: 3.9rem;
+  }
+
+  .simposio-evento--wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .simposio-evento--wrapper-grid h2 {
+    grid-column: span 2;
+  }
+
+  .card-evento {
+    padding: 1.6rem;
+  }
+
+  .card-evento-icone {
+    max-width: 6rem;
+  }
+
+  .agenda {
+    padding: 6.4rem 0;
+  }
+
+  .agenda-box {
+    margin-top: 4.8rem;
+  }
+
+  .certificado h2 {
+    font-size: 3.2rem;
+  }
+
+  .opcoes-ingressos {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .sobre {
+    margin-top: 3.2rem;
+  }
+
+  .faq > .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .divisao-lista {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem 2rem;
+  }
+
+  .simposio {
+    padding: 6.4rem 0;
+  }
+
+  .ingresso {
+    background-position: center 15%;
+  }
+
+  .ingresso > .container {
+    gap: 6.4rem;
+  }
+
+  .sobre {
+    padding: 0 0 6.4rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .promessa-left h1 {
+    font-size: 3.2rem;
+  }
+
+  .promessa-left p {
+    font-size: 1.8rem;
+  }
+
+  .card-evento-icone {
+    max-width: 4rem;
+  }
+}

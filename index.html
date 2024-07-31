@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CR2</title>
+  </head>
+  <body>
+    <svg
+      style="display: none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="calendario" viewBox="0 0 24 24">
+          <path
+            d="M13.675 0.000960211C14.0799 0.0256533 14.3923 0.364025 14.3815 0.766212V1.84494C17.5981 2.1492 19.2435 3.88254 19.2435 6.99887V15.6195C19.2435 19.0862 17.2169 20.8472 13.2288 20.8472H6.01477C2.02661 20.8472 0 19.0862 0 15.6195V6.99887C0 4.92439 0.725119 3.43999 2.21254 2.57331L2.31688 2.51534C2.5325 2.41721 2.78539 2.42621 2.9956 2.54519C3.24083 2.68401 3.38565 2.94858 3.36943 3.22817C3.35321 3.50775 3.17874 3.7541 2.91907 3.8641C1.93365 4.43574 1.46883 5.43149 1.46883 6.99887V7.27547H15.0323C15.4379 7.27547 15.7667 7.60157 15.7667 8.00384C15.7667 8.40611 15.4379 8.73221 15.0323 8.73221H1.46883V15.6195C1.46883 18.2656 2.78892 19.3628 6.01477 19.3812H13.2288C16.4081 19.3812 17.7654 18.2564 17.7654 15.6103V6.98965C17.7654 4.68467 16.7335 3.56906 14.3815 3.30169V4.0024C14.3273 4.37589 13.9976 4.64854 13.6174 4.63431C13.2372 4.62008 12.9291 4.32356 12.9034 3.94708V0.701673L12.917 0.586386C12.9473 0.435309 13.0253 0.296547 13.1414 0.191182C13.2864 0.0594758 13.4786 -0.00904568 13.675 0.000960211ZM14.098 14.7984L14.2164 14.8058C14.4194 14.8306 14.6097 14.9214 14.7567 15.0657C14.9331 15.2388 15.0323 15.4748 15.0323 15.7209C15.0323 16.2301 14.6161 16.6429 14.1026 16.6429C13.5892 16.6429 13.173 16.2301 13.173 15.7209C13.173 15.2117 13.5892 14.7989 14.1026 14.7989L14.098 14.7984ZM9.64036 14.7989L9.75697 14.8061C10.2154 14.863 10.57 15.2509 10.57 15.7209C10.57 16.2301 10.1538 16.6429 9.64036 16.6429C9.12694 16.6429 8.71072 16.2301 8.71072 15.7209C8.71072 15.2117 9.12694 14.7989 9.64036 14.7989ZM5.18293 14.7984L5.30115 14.8058C5.50414 14.8306 5.6945 14.9214 5.84146 15.0657C6.01782 15.2388 6.11703 15.4748 6.11703 15.7209C6.11703 16.2301 5.70081 16.6429 5.18739 16.6429C4.67396 16.6429 4.25775 16.2301 4.25775 15.7209C4.25775 15.2117 4.67396 14.7989 5.18739 14.7989L5.18293 14.7984ZM14.098 11.0646L14.2164 11.0717C14.4194 11.0965 14.6097 11.1873 14.7567 11.3316C14.9331 11.5048 15.0323 11.7407 15.0323 11.9868C15.0323 12.496 14.6161 12.9088 14.1026 12.9088C13.5892 12.9088 13.173 12.496 13.173 11.9868C13.173 11.4776 13.5892 11.0648 14.1026 11.0648L14.098 11.0646ZM9.64036 11.0648L9.75697 11.072C10.2154 11.1289 10.57 11.5168 10.57 11.9868C10.57 12.496 10.1538 12.9088 9.64036 12.9088C9.12694 12.9088 8.71072 12.496 8.71072 11.9868C8.71072 11.4776 9.12694 11.0648 9.64036 11.0648ZM5.18293 11.0646L5.30115 11.0717C5.50414 11.0965 5.6945 11.1873 5.84146 11.3316C6.01782 11.5048 6.11703 11.7407 6.11703 11.9868C6.11703 12.496 5.70081 12.9088 5.18739 12.9088C4.67396 12.9088 4.25775 12.496 4.25775 11.9868C4.25775 11.4776 4.67396 11.0648 5.18739 11.0648L5.18293 11.0646ZM5.60108 0.110956C5.97969 0.110956 6.29788 0.393059 6.34014 0.766212V1.77118H10.5421C10.9477 1.77118 11.2765 2.09729 11.2765 2.49956C11.2765 2.90182 10.9477 3.22793 10.5421 3.22793H6.32155V3.9563C6.32156 4.15108 6.24291 4.33776 6.10317 4.47463C5.96342 4.61149 5.77422 4.68714 5.57784 4.68467L5.47045 4.67421C5.12054 4.61425 4.85727 4.30958 4.86195 3.94708V0.766212L4.88271 0.657189C4.96852 0.33946 5.26032 0.110956 5.60108 0.110956Z"
+            fill="#887DFD"
+          />
+        </symbol>
+        <symbol id="ticket" viewBox="0 0 24 24">
+          <path
+            d="M0.612839 14.5433L2.56617 16.3964C2.70326 16.5264 2.88917 16.5995 3.08302 16.5995C3.27686 16.5995 3.46277 16.5264 3.59986 16.3964C3.803 16.2026 4.04464 16.0489 4.31079 15.9443C4.57694 15.8397 4.86232 15.7863 5.15039 15.787C6.35989 15.787 7.34351 16.7203 7.34351 17.868C7.34421 18.1414 7.28779 18.4122 7.17749 18.6648C7.06719 18.9174 6.90522 19.1468 6.70092 19.3396C6.56388 19.4697 6.48689 19.6461 6.48689 19.83C6.48689 20.0139 6.56388 20.1903 6.70092 20.3204L8.65426 22.1735C8.79718 22.3091 8.98396 22.3767 9.1711 22.3767C9.35825 22.3767 9.54539 22.3091 9.68795 22.1735L23.5777 8.99406C23.6457 8.92974 23.6997 8.85331 23.7365 8.76916C23.7734 8.685 23.7923 8.59477 23.7923 8.50364C23.7923 8.41252 23.7734 8.32229 23.7365 8.23813C23.6997 8.15398 23.6457 8.07755 23.5777 8.01323L21.6243 6.16013C21.4872 6.03009 21.3013 5.95704 21.1075 5.95704C20.9136 5.95704 20.7277 6.03009 20.5906 6.16013C20.3875 6.35395 20.1459 6.50761 19.8797 6.61221C19.6136 6.71681 19.3282 6.77027 19.0401 6.76951C17.8306 6.76951 16.847 5.83619 16.847 4.68854C16.847 4.13258 17.0755 3.61025 17.4896 3.21695C17.6266 3.08687 17.7036 2.91047 17.7036 2.72654C17.7036 2.54261 17.6266 2.3662 17.4896 2.23612L15.5363 0.383024C15.3992 0.252984 15.2133 0.179932 15.0194 0.179932C14.8256 0.179932 14.6397 0.252984 14.5026 0.383024L0.612839 13.5625C0.544805 13.6268 0.490822 13.7032 0.453988 13.7874C0.417154 13.8715 0.398193 13.9618 0.398193 14.0529C0.398193 14.144 0.417154 14.2342 0.453988 14.3184C0.490822 14.4026 0.544805 14.479 0.612839 14.5433ZM9.90214 6.70985L10.4819 7.25992C10.6244 7.39553 10.8116 7.46316 10.9987 7.46316C11.1858 7.46316 11.373 7.39553 11.5155 7.25992C11.6526 7.12984 11.7296 6.95344 11.7296 6.76951C11.7296 6.58557 11.6526 6.40917 11.5155 6.27909L10.9358 5.72902L15.0194 1.85427L15.9902 2.77509C15.5937 3.3422 15.3831 4.008 15.3849 4.68854C15.3849 6.60095 17.0246 8.15682 19.0401 8.15682C19.7572 8.1587 20.4588 7.95897 21.0563 7.58282L22.0268 8.50364L17.9436 12.3784L17.3638 11.8283C17.2964 11.7621 17.2157 11.7092 17.1266 11.6729C17.0374 11.6365 16.9414 11.6174 16.8444 11.6166C16.7473 11.6158 16.651 11.6333 16.5612 11.6682C16.4714 11.7031 16.3897 11.7546 16.3211 11.8197C16.2525 11.8849 16.1982 11.9623 16.1614 12.0476C16.1247 12.1328 16.1062 12.2241 16.107 12.3163C16.1079 12.4084 16.128 12.4994 16.1663 12.584C16.2046 12.6686 16.2603 12.7452 16.3302 12.8092L16.9099 13.3592L9.1711 20.7023L8.20028 19.7814C8.59676 19.2143 8.80738 18.5485 8.80558 17.868C8.80558 15.9556 7.16586 14.3997 5.15039 14.3997C4.43332 14.3978 3.73173 14.5976 3.13419 14.9737L2.16374 14.0529L9.90214 6.70985Z"
+            fill="#887DFD"
+          />
+        </symbol>
+        <symbol id="chevron" viewBox="0 0 24 24">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.2478 8.73236C10.2478 8.45595 10.1334 8.19187 9.93179 8.00282L1.68394 0.270465C1.28103 -0.107264 0.648197 -0.0868499 0.270466 0.316062C-0.107264 0.718974 -0.0868505 1.35181 0.316062 1.72954L7.78573 8.73236L0.316062 15.7352C-0.0868498 16.1129 -0.107263 16.7457 0.270467 17.1487C0.648198 17.5516 1.28103 17.572 1.68395 17.1943L9.93179 9.4619C10.1334 9.27285 10.2478 9.00877 10.2478 8.73236Z"
+            fill="#353535"
+          />
+        </symbol>
+
+        <symbol id="whatsapp" viewBox="0 0 20 20">
+          <path
+            d="M13.9799 11.5143C13.7884 11.4185 12.5436 10.844 12.3521 10.7482C12.1606 10.6525 11.9691 10.6525 11.7776 10.844C11.5861 11.0355 11.2031 11.61 11.0116 11.8015C10.9158 11.993 10.7243 11.993 10.5328 11.8973C9.86252 11.61 9.19225 11.227 8.61774 10.7482C8.13897 10.2695 7.66021 9.69495 7.2772 9.12044C7.18145 8.92893 7.2772 8.73743 7.37295 8.64167C7.4687 8.54592 7.56446 8.35442 7.75596 8.25866C7.85171 8.16291 7.94747 7.97141 7.94747 7.87565C8.04322 7.7799 8.04322 7.5884 7.94747 7.49264C7.85171 7.39689 7.37295 6.24786 7.18145 5.7691C7.08569 5.09883 6.89419 5.09883 6.70268 5.09883H6.22392C6.03241 5.09883 5.74516 5.29033 5.6494 5.38608C5.07489 5.9606 4.78763 6.63087 4.78763 7.39689C4.88338 8.25866 5.17064 9.12044 5.74516 9.88646C6.79844 11.4185 8.13897 12.6633 9.76677 13.4293C10.2455 13.6208 10.6285 13.8123 11.1073 13.9081C11.5861 14.0996 12.0648 14.0996 12.6393 14.0038C13.3096 13.9081 13.8841 13.4293 14.2671 12.8548C14.4586 12.4718 14.4586 12.0888 14.3629 11.7058L13.9799 11.5143V11.5143ZM16.3737 2.80076C12.6393 -0.933588 6.60693 -0.933588 2.87258 2.80076C-0.191505 5.86485 -0.766021 10.5567 1.34054 14.2911L0 19.1745L5.07489 17.8339C6.51118 18.5999 8.04322 18.983 9.57526 18.983C14.8417 18.983 19.0548 14.7698 19.0548 9.50345C19.1505 7.01388 18.0972 4.62006 16.3737 2.80076V2.80076ZM13.7884 16.2061C12.5436 16.9722 11.1073 17.4509 9.57526 17.4509C8.13897 17.4509 6.79844 17.0679 5.55365 16.3976L5.26639 16.2061L2.29806 16.9722L3.06408 14.0996L2.87258 13.8123C0.574516 9.98221 1.72355 5.19458 5.4579 2.80076C9.19225 0.406949 13.9799 1.65173 16.2779 5.29033C18.576 9.02468 17.5227 13.9081 13.7884 16.2061Z"
+            fill="#00B9AF"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <section class="hero">
+      <div class="container">
+        <div class="promessa-left">
+          <h1>
+            1 dia de imersão focado em terapia digestiva para te ajudar na resolução de casos
+            complexos dos seus pacientes
+          </h1>
+          <p>Vamos entender de forma prática e com base em casos reais como</p>
+
+          <div class="evento-data">
+            <span>
+              <svg width="24" height="24">
+                <use href="#calendario"></use>
+              </svg>
+              Dia 17.08 — 9h às 18h
+            </span>
+
+            <span>
+              <svg width="24" height="24">
+                <use href="#ticket"></use>
+              </svg>
+              Online e Ao Vivo
+            </span>
+          </div>
+
+          <a href="#" class="button-primary">
+            Garanta o lote promocional
+            <div class="icon">
+              <img src="/assets/svgs/chevron.svg" alt="Chevron" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="divisao">
+      <div class="container">
+        <ul class="divisao-lista">
+          <li class="divisao-item">
+            <p class="divisao-item--top">9h</p>
+            <p class="divisao-item--bottom">de conteúdo</p>
+          </li>
+
+          <li class="divisao-item">
+            <p class="divisao-item--top">Análise</p>
+            <p class="divisao-item--bottom">de casos reais</p>
+          </li>
+
+          <li class="divisao-item">
+            <p class="divisao-item--top">Um dia</p>
+            <p class="divisao-item--bottom">inteiro de imersão científica</p>
+          </li>
+
+          <li class="divisao-item">
+            <p class="divisao-item--top">Interação</p>
+            <p class="divisao-item--bottom">de casos reais</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="simposio">
+      <div class="container">
+        <div class="simposio--first-content">
+          <h1>
+            Você já sabe o verdadeiro papel que a terapia digestiva tem no desfecho de casos
+            clínicos?
+          </h1>
+          <p>
+            No Simpósio Online de Nutrição Enteral e Parenteral, vamos juntos partir dos
+            <b>princípios teóricos</b> das terapias nutricionais rumo à
+            <b>aplicação concreta no seu dia-a-dia</b> junto aos seus pacientes.
+          </p>
+          <span>
+            <img src="/assets/svgs/arrow-down.svg" alt="Seta para baixo" />
+            <b><p>Descubra o que você aprenderá</p></b>
+            <img src="/assets/svgs/arrow-down.svg" alt="Seta para baixo"
+          /></span>
+        </div>
+
+        <section class="simposio-evento">
+          <div class="simposio-evento--wrapper-grid">
+            <h2>É isso que você receberá durante o Simpósio:</h2>
+
+            <div class="card-evento">
+              <img
+                class="card-evento-icone"
+                src="assets/images/icone-transmissao.png"
+                alt="Transmissão"
+              />
+              <p>Transmissão Ao vivo</p>
+            </div>
+
+            <div class="card-evento">
+              <img class="card-evento-icone" src="assets/images/icone-analista.png" alt="Análise" />
+              <p>Análise de um caso clínico enviado por você</p>
+            </div>
+
+            <div class="fill-grid"></div>
+
+            <div class="card-evento">
+              <img
+                class="card-evento-icone"
+                src="assets/images/icone-provas.png"
+                alt="Ícone provas"
+              />
+              <p>Provas de bancas</p>
+            </div>
+
+            <div class="card-evento">
+              <img
+                class="card-evento-icone"
+                src="assets/images/icone-material.png"
+                alt="ícone material didático"
+              />
+              <p>Material didático com conteúdos</p>
+            </div>
+
+            <div class="card-evento">
+              <img
+                class="card-evento-icone"
+                src="assets/images/icone-whatsapp.png"
+                alt="ícone whatsapp"
+              />
+              <p>Grupo exclusivo para alunos</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="agenda">
+        <div class="container">
+          <h2>Confira a agenda</h2>
+          <article class="agenda-box">
+            <img
+              class="agenda-box--left"
+              src="assets/images/mockup-celular.png"
+              alt="Celular com agenda"
+            />
+
+            <div class="agenda-box--right">
+              <ul class="agenda-lista agenda-manha">
+                <h3>Manhã</h3>
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 9h às 9h15 | </span> Apresentação e
+                    boas-vindas
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 9h15 às 9h35 | </span> Desafios no cuidado e
+                    abordagem multidisciplinar ma via alternativa de alimentação
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 9h40 às 10h | </span> Início da terapia
+                    nutricional enteral e manejo das tolerâncias até atingir a meta
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p><span class="lista-topico-horario"> 10h às 10h15 | </span> INTERVALO</p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 10h15 às 11h | </span> Nutrição parenteral:
+                    bolsa pronta ou fórmula manipulada?
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 11h às 12h | </span> Desafios do paciente de
+                    alta domiciliar com dieta enteral - você sabe orientar?
+                  </p>
+                </li>
+              </ul>
+              <ul class="agenda-lista agenda-tarde">
+                <h3>Tarde</h3>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p><span class="lista-topico-horario"> 12h às 13h | </span> INTERVALO</p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 13h às 14h30 | </span> Dieta enteral e caso
+                    clínico de tumor de cabeça e pescoço = aula prática
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p><span class="lista-topico-horario"> 14h30 às 14h45 | </span> INTERVALO</p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 14h45 às 16h30 | </span> Ensinando o passo a
+                    passo da prescrição de nutrição parenteral no adulto
+                  </p>
+                </li>
+
+                <li class="lista-topico">
+                  <img
+                    class="lista-topico-icone"
+                    src="assets/svgs/check-agenda.svg"
+                    alt="Checkbox"
+                  />
+                  <p>
+                    <span class="lista-topico-horario"> 16h30 | </span> Sorteio e informe dos
+                    certificados surpresa do lançamento?
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="certificado">
+      <div class="container">
+        <h2>Receba um certificado de aproximadamente 9h</h2>
+        <div class="certificado-image-wrapper">
+          <img src="assets/images/certificado.png" alt="Certificado do evento" />
+        </div>
+
+        <a href="#" class="button-primary">
+          Garanta o lote promocional
+          <div class="icon">
+            <img src="/assets/svgs/chevron.svg" alt="Chevron" />
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="ingresso">
+      <div class="container">
+        <h2>Garanta agora o seu ingresso</h2>
+
+        <ul class="opcoes-ingressos">
+          <li class="opcao-ingresso opcao--left">
+            <h3 class="opcao-title">Lote Promocional</h3>
+
+            <div class="opcao-padding">
+              <ul class="opcao-beneficios">
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Transmissão ao vivo</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Transmissão ao vivo</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Análise de um caso clínico enviado por você</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Material didático com conteúdos</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Provas de bancas</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Grupo exclusivo para alunos</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Certificado</p>
+                </li>
+
+                <li class="opcao-beneficios-item unchecked">
+                  <img src="assets/svgs/unchecked.svg" alt="Checked ícone" />
+                  <p>Gravação disponível na íntegra</p>
+                </li>
+              </ul>
+
+              <div class="opcao-preco-wrapper">
+                <p>Por apenas</p>
+                <p class="opcao-preco-text">R$ XXXX</p>
+              </div>
+              <a href="#" class="button-primary">
+                Garanta o lote promocional
+                <div class="icon">
+                  <img src="/assets/svgs/ticket.svg" alt="Chevron" />
+                </div>
+              </a>
+            </div>
+            <div class="forma-pagamento">
+              <img src="assets/svgs/formas-pagamento.svg" alt="Formas de pagamento" />
+            </div>
+          </li>
+
+          <li class="opcao-ingresso opcao--right">
+            <h3 class="opcao-title">Lote Promocional + Gravação</h3>
+            <div class="opcao-padding">
+              <ul class="opcao-beneficios">
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Transmissão ao vivo</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Transmissão ao vivo</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Análise de um caso clínico enviado por você</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Material didático com conteúdos</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Provas de bancas</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Grupo exclusivo para alunos</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Certificado</p>
+                </li>
+
+                <li class="opcao-beneficios-item">
+                  <img src="assets/svgs/check-preco.svg" alt="Checked ícone" />
+                  <p>Gravação disponível na íntegra</p>
+                </li>
+              </ul>
+
+              <div class="opcao-preco-wrapper">
+                <p>Por apenas</p>
+                <p class="opcao-preco-text">R$ XXXX</p>
+              </div>
+              <a href="#" class="button-primary">
+                Garanta o lote promocional
+                <div class="icon">
+                  <img src="/assets/svgs/ticket.svg" alt="Chevron" />
+                </div>
+              </a>
+            </div>
+
+            <div class="forma-pagamento">
+              <img src="assets/svgs/formas-pagamento.svg" alt="Formas de pagamento" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sobre">
+      <div class="container">
+        <div class="sobre-wrapper">
+          <img src="assets/images/foto-expert-sobre.png" alt="Cris Scorza" />
+
+          <div class="sobre-wrapper-content--right">
+            <h2 class="sobre-title">Quem é Cris Scorza?</h2>
+            <p>
+              Formou-se em 2001 no curso de Graduação em Nutrição pela Universidade Bandeirante de
+              São Paulo. Desde o mesmo ano, atua como nutricionista no Hospital-Escola da
+              Universidade Federal do Estado de São Paulo (UNIFESP). 
+            </p>
+            <p>
+              Em 2004, concluiu a Especialização em Distúrbios Metabólicos e Risco Cardiovascular
+              pelo Centro de Extensão Universitária. Em 2023, concluiu o doutorado em
+              Neurologia/Neurociências na Universidade Federal de São Paulo.  
+            </p>
+            <p>
+              É a criadora do aplicativo EMTN Tull, que oferece aos usuários uma estrutura de
+              prontuário nutricional de pacientes. Além disso, é autora do "Manual de Nutrição
+              Clínica" e produtora dos cursos "Como Prescrever Dietas Enterais", "Antropometria",
+              "Terapia Nutricional no Paciente Crítico" e "Terapia Nutricional nas Doenças Renais",
+              bem como da Mentoria em Nutrição Hospitalar, e agora, do “Programa Avançado de
+              Nutrição Gastrointestinal”. 
+            </p>
+
+            <a href="#" class="button-primary">
+              Garanta o lote promocional
+              <div class="icon">
+                <img src="/assets/svgs/chevron.svg" alt="Chevron" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="faq--left">
+          <h2>Dúvidas Frequentes</h2>
+          <ul class="faq-wrapper">
+            <li class="faq-item">
+              <div class="faq-pergunta">
+                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <img src="assets/svgs/arrow-down-faq.svg" alt="" />
+              </div>
+              <div class="faq-resposta">
+                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <div class="faq-pergunta">
+                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <img src="assets/svgs/arrow-down-faq.svg" alt="" />
+              </div>
+              <div class="faq-resposta">
+                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <div class="faq-pergunta">
+                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <img src="assets/svgs/arrow-down-faq.svg" alt="" />
+              </div>
+              <div class="faq-resposta">
+                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <div class="faq-pergunta">
+                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <img src="assets/svgs/arrow-down-faq.svg" alt="" />
+              </div>
+              <div class="faq-resposta">
+                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="faq--right">
+          <aside class="suporte">
+            <img class="suporte-image" src="assets/images/foto-expert-faq.png" alt="Cris Scorza" />
+            <p>Se ainda estiver com dúvidas nossa equipe está a disposição:</p>
+            <a href="#" class="button-suporte"
+              >Falar com suporte
+              <div class="button-suporte-icon">
+                <svg width="24" height="24" class="icon-whatsapp">
+                  <use href="#whatsapp"></use>
+                </svg>
+              </div>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
