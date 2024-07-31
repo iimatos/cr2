@@ -25,6 +25,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,6 +57,7 @@ a {
 h1,
 h2 {
   line-height: 110%;
+  font-weight: 600;
 }
 
 h1 {
@@ -76,7 +78,7 @@ p {
   width: 100%;
   max-width: 123rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3.2rem;
 }
 
 .button-primary {
@@ -117,6 +119,7 @@ p {
   background-size: cover;
   background-position: 65% center;
   padding: 9.4rem 0 15rem;
+  margin-top: 4dvh;
 }
 
 .promessa-left {
@@ -284,6 +287,7 @@ p {
 .agenda-lista h3 {
   text-transform: uppercase;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .agenda-lista li + li {
@@ -291,7 +295,7 @@ p {
 }
 
 .agenda-box--right {
-  width: 50%;
+  width: 70%;
   margin-top: 3rem;
 }
 
@@ -320,7 +324,10 @@ p {
 .certificado {
   padding-bottom: 6rem;
   position: relative;
-  overflow-x: hidden;
+  background: url('/public/assets/images/background-certificado.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .certificado > .container {
@@ -436,6 +443,7 @@ p {
 
 .opcao-preco-text {
   font-size: clamp(4.8rem, 6vw, 9rem);
+  font-weight: 600;
 }
 
 .forma-pagamento {
@@ -450,7 +458,9 @@ p {
 .sobre {
   margin-top: 22rem;
   padding: 0 0 12.8rem;
-  background: url('public/assets/images/background-sobre.jpg') center top;
+  background: url('public/assets/images/background-sobre.jpg');
+  background-size: 100% 80%;
+  background-position: 0% -15%;
   background-repeat: no-repeat;
 }
 
@@ -499,7 +509,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
-  width: 100%;
+  width: 80%;
   margin-top: 6rem;
 }
 
@@ -525,6 +535,10 @@ p {
 
 .faq-resposta p {
   padding-bottom: 0.6rem;
+}
+
+.faq-resposta p + p {
+  margin-top: 1.2rem;
 }
 
 .faq-item.open .faq-resposta {
@@ -588,6 +602,149 @@ p {
   box-shadow: inset 0 0.09rem 0 rgba(67, 26, 1, 0.25), 0px 3.77px 3.77px 0px rgba(0, 0, 0, 0.25);
 }
 
+.form-wrapper {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0dvh;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  padding: 0 3.2rem;
+}
+
+.form-wrapper.open {
+  animation: openForm 0.35s ease-in-out forwards;
+}
+
+@keyframes openForm {
+  to {
+    height: 100dvh;
+    opacity: 1;
+  }
+}
+
+.form-wrapper.closed {
+  animation: closeForm 0.35s ease-in-out forwards;
+}
+
+@keyframes closeForm {
+  0% {
+    height: 100dvh;
+  }
+
+  100% {
+    height: 0dvh;
+  }
+}
+
+#form-evento {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#form-evento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.3rem;
+  max-width: 54rem;
+  text-align: center;
+}
+
+#form-evento.open {
+  animation: showForm 0.35s 0.2s ease-in-out forwards;
+}
+
+@keyframes showForm {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+#form-evento h2 {
+  color: #5448ce;
+}
+
+#form-evento p {
+  font-size: 2.3rem;
+  max-width: 46rem;
+}
+
+.form-evento-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.form-evento-inputs input {
+  padding: 2.4rem 2rem;
+  background: #134ea1;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 1.2rem;
+}
+
+.form-evento-inputs input::placeholder {
+  color: #fff;
+}
+
+.form-evento-inputs input::selection {
+  color: #000000;
+  background: yellow;
+}
+
+#form-evento .button-primary {
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background: #004097;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.footer > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logos {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.logos img {
+  max-width: 13rem;
+}
+
+.info-right {
+  display: flex;
+  gap: 6rem;
+}
+
+.info-right p {
+  font-size: 1.3rem;
+  max-width: 20rem;
+}
+
 /* responsivo */
 
 @media screen and (max-width: 1024px) {
@@ -638,16 +795,35 @@ p {
     align-items: center;
     gap: 3.2rem;
   }
+
+  .footer > .container {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .info-right {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .info-right p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .button-primary {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
   .hero {
     background: url('public/assets/images/background-hero-mobile.jpg');
     min-height: 100dvh;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
-    padding: 9.4rem 0 6.4rem;
+    padding: 4.4rem 0 3.4rem;
   }
 
   .promessa-left {
@@ -706,6 +882,10 @@ p {
 }
 
 @media screen and (max-width: 560px) {
+  .evento-data span:nth-of-type(1) {
+    display: none;
+  }
+
   .divisao-lista {
     grid-template-columns: repeat(2, 1fr);
     gap: 3.2rem 2rem;
@@ -730,7 +910,7 @@ p {
 
 @media screen and (max-width: 460px) {
   .promessa-left h1 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
   }
 
   .promessa-left p {
@@ -740,4 +920,78 @@ p {
   .card-evento-icone {
     max-width: 4rem;
   }
+}
+
+/* countdown */
+.timmer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(24px);
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8dvh;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem;
+}
+
+.heading {
+  font-weight: 600;
+  font-family: Mena Grotesk, sans serif;
+  font-size: clamp(1.9em, 1.9154rem + 0.8205vw, 1rem);
+  letter-spacing: -0.06em;
+  line-height: 100%;
+}
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.number {
+  font-weight: 600;
+  font-family: Mena Grotesk, sans serif;
+  font-size: clamp(1.9em, 1.9154rem + 0.8205vw, 1rem);
+  letter-spacing: -0.06em;
+  line-height: 100%;
+}
+.text {
+  font-size: 0.8em;
+  font-family: Mena Grotesk, sans serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 90%;
+  color: black;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: black;
+  gap: 0;
 }

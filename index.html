@@ -43,6 +43,32 @@
       </defs>
     </svg>
 
+    <div class="timmer">
+      <div class="container-row">
+        <h2 class="heading">O lote 1 termina em...</h2>
+        <div class="w-embed w-script">
+          <div id="timer" class="row">
+            <div id="days" class="column">
+              <span class="number"></span>
+              <span class="text">dias</span>
+            </div>
+            <div id="hours" class="column">
+              <span class="number"></span>
+              <span class="text">horas</span>
+            </div>
+            <div id="minutes" class="column">
+              <span class="number"></span>
+              <span class="text">mins</span>
+            </div>
+            <div id="seconds" class="column">
+              <span class="number"></span>
+              <span class="text">segs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="hero">
       <div class="container">
         <div class="promessa-left">
@@ -68,7 +94,7 @@
             </span>
           </div>
 
-          <a href="#" class="button-primary">
+          <a href="#ingresso-anchor" class="button-primary">
             Garanta o lote promocional
             <div class="icon">
               <img src="public/assets/svgs/chevron.svg" alt="Chevron" />
@@ -329,7 +355,7 @@
           <img src="public/assets/images/certificado.png" alt="Certificado do evento" />
         </div>
 
-        <a href="#" class="button-primary">
+        <a href="#ingresso-anchor" class="button-primary">
           Garanta o lote promocional
           <div class="icon">
             <img src="public/assets/svgs/chevron.svg" alt="Chevron" />
@@ -342,7 +368,7 @@
       <div class="container">
         <h2>Garanta agora o seu ingresso</h2>
 
-        <ul class="opcoes-ingressos">
+        <ul id="ingresso-anchor" class="opcoes-ingressos">
           <li class="opcao-ingresso opcao--left">
             <h3 class="opcao-title">Lote Promocional</h3>
 
@@ -393,7 +419,7 @@
                 <p>Por apenas</p>
                 <p class="opcao-preco-text">R$ XXXX</p>
               </div>
-              <a href="#" class="button-primary">
+              <a class="button-primary button-open-form" data-box="box_one">
                 Garanta o lote promocional
                 <div class="icon">
                   <img src="public/assets/svgs/ticket.svg" alt="Chevron" />
@@ -454,7 +480,7 @@
                 <p>Por apenas</p>
                 <p class="opcao-preco-text">R$ XXXX</p>
               </div>
-              <a href="#" class="button-primary">
+              <a class="button-primary button-open-form" data-box="box_two">
                 Garanta o lote promocional
                 <div class="icon">
                   <img src="public/assets/svgs/ticket.svg" alt="Chevron" />
@@ -496,7 +522,7 @@
               Nutrição Gastrointestinal”. 
             </p>
 
-            <a href="#" class="button-primary">
+            <a href="#ingresso-anchor" class="button-primary">
               Garanta o lote promocional
               <div class="icon">
                 <img src="public/assets/svgs/chevron.svg" alt="Chevron" />
@@ -514,41 +540,68 @@
           <ul class="faq-wrapper">
             <li class="faq-item">
               <div class="faq-pergunta">
-                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <h3>Onde assisto às aulas?</h3>
                 <img src="public/assets/svgs/arrow-down-faq.svg" alt="" />
               </div>
               <div class="faq-resposta">
-                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+                <div>
+                  <p>As aulas serão online e ao vivo, no dia 17/08, através do aplicativo Zoom.</p>
+                  <p>
+                    🚨Abaixo está um vídeo de apoio, de como baixar o aplicativo do Zoom e entrar em
+                    uma reunião: https://www.youtube.com/watch?v=TYzSoU_RLcM
+                  </p>
+                  <p>
+                    Recomendamos que deixe o aplicativo baixado para não ter intercorrências no
+                    momento do Simpósio.
+                  </p>
+                  <p>Caso precise de ajuda é só nos chamar no WhatsApp.</p>
+                </div>
               </div>
             </li>
 
             <li class="faq-item">
               <div class="faq-pergunta">
-                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <h3>Quais são as formas de pagamento?</h3>
                 <img src="public/assets/svgs/arrow-down-faq.svg" alt="" />
               </div>
               <div class="faq-resposta">
-                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+                <div>
+                  <p>Você pode se inscrever no Simpósio por cartão (em até 12x) e por PIX. </p>
+                  <p>
+                    Lembrando que é possível fazer a inscrição para mais de uma pessoa. Portanto,
+                    você pode comprar o ingresso para outro profissional da área também.
+                  </p>
+                </div>
               </div>
             </li>
 
             <li class="faq-item">
               <div class="faq-pergunta">
-                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <h3>Por quanto tempo tenho acesso?</h3>
                 <img src="public/assets/svgs/arrow-down-faq.svg" alt="" />
               </div>
               <div class="faq-resposta">
-                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+                <div>
+                  <p>
+                    Para os participantes que optaram por comprar também a gravação do Simpósio, o
+                    acesso é vitalício. Você poderá assistir quando e quantas vezes quiser.
+                  </p>
+                </div>
               </div>
             </li>
 
             <li class="faq-item">
               <div class="faq-pergunta">
-                <h3>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</h3>
+                <h3>As aulas são gravadas?</h3>
                 <img src="public/assets/svgs/arrow-down-faq.svg" alt="" />
               </div>
               <div class="faq-resposta">
-                <div><p>Lorem ipsum dolor sit amet consectetur. Est sit consequat.</p></div>
+                <div>
+                  <p>
+                    A gravação do Simpósio será disponibilizada aos participantes que escolherem
+                    comprá-la. Você pode selecionar essa opção ao fazer sua inscrição.
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -574,6 +627,89 @@
         </div>
       </div>
     </section>
+
+    <aside class="form-wrapper closed">
+      <form
+        id="form-evento"
+        action="https://flow.loyoladigital.com/webhook-test/c5a21739-0c0a-4db8-b2a3-331ed20f267c"
+        method="POST"
+      >
+        <img src="public/assets//images/logo-form.png" alt="Nutrição Enteral e Parenteral" />
+        <h2>Parabéns por dar o primeiro passo na sua inscrição</h2>
+        <p>Antes de prosseguirmos, peço que preencha os dados abaixo:</p>
+
+        <div class="form-evento-inputs">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome completo"
+            required
+            value=""
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu melhor e-mail"
+            required
+            value=""
+          />
+          <input
+            type="text"
+            id="telefone"
+            name="telefone"
+            placeholder="DDD + Whatsapp"
+            required
+            value=""
+          />
+
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" value="" />
+          <input type="hidden" name="utm_content" value="" />
+          <input type="hidden" name="utm_term" value="" />
+
+          <input
+            type="hidden"
+            id="event_name"
+            name="event_name"
+            value="Simpósio Online de Nutrição Enteral e Parenteral"
+          />
+
+          <input type="hidden" id="tag_id" name="tag_id" value="52" />
+
+          <input
+            type="hidden"
+            id="custom_info"
+            name="custom_info"
+            value="cr02_org"
+            data-url="org"
+          />
+        </div>
+
+        <button class="button-primary submit-form" type="submit">
+          Garanta o lote promocional
+          <div class="icon">
+            <img src="public/assets/svgs/chevron.svg" alt="Chevron" />
+          </div>
+        </button>
+      </form>
+    </aside>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="logos">
+          <img src="public/assets/images/emtnull.png" alt="Emtnull" />
+          <img src="public/assets/svgs/loyola.svg" alt="Loyola" />
+        </div>
+
+        <div class="info-right">
+          <p>CNPJ: 41.003.284/0001-57 Cris Scorza</p>
+          <p><a href="#">Políticas de privacidade</a> e <a href="#">Termos de uso</a></p>
+        </div>
+      </div>
+    </footer>
 
     <script src="main.js" type="module"></script>
   </body>
