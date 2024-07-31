@@ -324,7 +324,7 @@ p {
 .certificado {
   padding-bottom: 6rem;
   position: relative;
-  background: url('/public/assets/images/background-certificado.png');
+  background: url('public/assets/images/background-certificado.png');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -812,6 +812,29 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  /* fonts-size */
+
+  .promessa-left h1 {
+    font-size: 3.9rem;
+  }
+
+  h1 {
+    font-size: 3.9rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  .simposio--first-content h1 {
+    font-size: 3.2rem;
+  }
+  .simposio-evento--wrapper-grid h2 {
+    font-size: 3.2rem;
+  }
+
+  /*end of fonts-size */
+
   .button-primary {
     font-size: 1.2rem;
     width: 100%;
@@ -830,20 +853,9 @@ p {
     margin-top: 25rem;
   }
 
-  .promessa-left h1 {
-    font-size: 3.9rem;
-  }
-
-  .simposio--first-content h1 {
-    font-size: 3.9rem;
-  }
-
   .simposio-evento--wrapper-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-  }
-  .simposio-evento--wrapper-grid h2 {
-    grid-column: span 2;
   }
 
   .card-evento {
@@ -860,10 +872,6 @@ p {
 
   .agenda-box {
     margin-top: 4.8rem;
-  }
-
-  .certificado h2 {
-    font-size: 3.2rem;
   }
 
   .opcoes-ingressos {
@@ -905,6 +913,14 @@ p {
 
   .sobre {
     padding: 0 0 6.4rem;
+  }
+
+  #form-evento h2 {
+    font-size: 2.4rem;
+  }
+
+  #form-evento p {
+    font-size: 1.6rem;
   }
 }
 
